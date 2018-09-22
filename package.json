@@ -1,0 +1,22 @@
+{
+  "name": "saveas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron.cmd .",
+    "build": "electron-packager . saveas --icon=resources/default.ico --overwrite",
+    "postbuild": "postbuild.bat",
+    "postinstall": "./node_modules/.bin/electron-rebuild.cmd"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.8",
+    "electron-packager": "^12.1.1",
+    "electron-rebuild": "^1.8.2"
+  },
+  "dependencies": {
+    "sanitize-filename": "^1.6.1"
+  }
+}
