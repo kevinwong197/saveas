@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+			<style>
+				html, body {
+			    width: 100vw;
+			    height: 100vh;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+				}
+				webview {
+			    display: block;
+			    border: none;
+			    top: 0px;
+			    left: 0px;
+			    margin: 0;
+			    padding: 0;
+			    height: 100vh;
+			    width: 100vw;
+				}
+			</style>
+	 </head>
+	 
+	 <body>
+	 		<script>
+	      let loadurl = function (urlstr) {
+					const webview = document.getElementById('webview')
+	      	webview.src = urlstr;
+					webview.shadowRoot.getElementById('browser-plugin-1').style.height = "100%";
+					webview.shadowRoot.getElementById('browser-plugin-1').style.width = "100%";
+	      }
+	 		</script>
+			<webview id="webview"
+				blinkfeatures="OverlayScrollbars"
+				webpreferences="nativeWindowOpen=true">
+			</webview>
+	 </body>
+</html>
